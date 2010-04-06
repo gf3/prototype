@@ -554,8 +554,16 @@ Form.Element.Methods = {
 
   /**
    *  Form.Element.setValue(@element, value) -> Element
-   *
-   *  Sets `value` to be the value of the form control. Returns the element.
+   *  
+   *  Sets `value` to be the value of the form control. Note that for checkbox
+   *  and radio inputs, sets `checked` property and does not alter `value`.
+   *  Returns the element.
+   *  
+   *  ##### Example
+   *  
+   *        $('myelement').setValue('secret tunnels');
+   *        Form.Element.setValue('myelement', 'space animals');
+   *  
   **/
   setValue: function(element, value) {
     element = $(element);
